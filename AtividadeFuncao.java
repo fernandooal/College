@@ -6,10 +6,10 @@ public class AtividadeFuncao {
 
 	public static void main(String[] args) {
 		
-		//ExercÌcio:
-		//Escreva um procedimento que recebe as 3 notas de um aluno por par‚metro e uma letra.
-		//Se a letra for A o procedimento calcula a mÈdia aritmÈtica das notas do aluno, se for P, a sua mÈdia ponderada (pesos: 5, 3 e 2) e se for H, a sua mÈdia harmÙnica. 
-		//A mÈdia calculada tambÈm deve retornar por par‚metro.
+		//Exerc√≠cio:
+		//Escreva um procedimento que recebe as 3 notas de um aluno por par√¢metro e uma letra.
+		//Se a letra for A o procedimento calcula a m√©dia aritm√©tica das notas do aluno, se for P, a sua m√©dia ponderada (pesos: 5, 3 e 2) e se for H, a sua m√©dia harm√¥nica. 
+		//A m√©dia calculada tamb√©m deve retornar por par√¢metro.
 
 		
 		Scanner scan = new Scanner(System.in);
@@ -17,11 +17,11 @@ public class AtividadeFuncao {
 		double nota[] = new double[3];
 		
 		for(int i = 0; i < 3; i++) {
-			System.out.println("Informe a " + (1 + i) + "∫ nota do aluno: ");
+			System.out.println("Informe a " + (1 + i) + "¬∫ nota do aluno: ");
 			nota[i] = scan.nextDouble();
 		}
 		
-		System.out.println("Informe o procedimento do c·lculo da mÈdia (A, P ou H): ");
+		System.out.println("Informe o procedimento do c√°lculo da m√©dia (A, P ou H): ");
 		String letra = scan.next();
 		
 		nota(nota, letra);
@@ -36,13 +36,13 @@ public class AtividadeFuncao {
 			for(int i = 0; i < 3; i++) {
 				media += nota[i];
 			}
-			System.out.println("A mÈdia È: " + media/3);
+			System.out.println("A m√©dia √©: " + media/3);
 		} else if(letra.equals("P")) {
 			media = ((nota[0] * 5) + (nota[1] * 3) + (nota[2] * 2)/10);
-			System.out.println("A mÈdia È: " + media);
+			System.out.println("A m√©dia √©: " + media);
 		} else if(letra.equals("H")) {
 			media = ((1/nota[0] + 1/nota[1] + 1/nota[2])/3);
-			System.out.println("A mÈdia È: " + (1 + media));
+			System.out.println("A m√©dia √©: " + (1 / media));
 		}
 	}
 }
