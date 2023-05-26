@@ -15,23 +15,26 @@ public class ReajusteSalarial {
 		
 		letra = Character.toUpperCase(letra);
 		
-		aumentoSalario(salario, letra);
-		
+		while(true) {
+			if(letra == 'A' || letra == 'I' || letra == 'O') {
+				aumentoSalario(salario,letra);
+				break;
+			} else {
+				System.out.println("Departamento inválido! Tente novamente utilizando A, I ou O: ");
+				letra = scan.next().charAt(0);
+				letra = Character.toUpperCase(letra);
+			}
+		}
 	}
 	
 	public static void aumentoSalario(float salario, char letra) {
-		
-		Scanner scan = new Scanner(System.in);
 		
 		if(letra == 'A') {
 			salario = (salario*1.15f);
 		} else if(letra == 'I') {
 			salario = (salario*1.12f);
-		} else if(letra == 'O') {
-			salario = (salario*(1.10f));
 		} else {
-			System.out.println("Departamento inválido! Tente novamente utilizando A, I ou O: ");
-			letra = scan.next().charAt(0);
+			salario = (salario*(1.10f));
 		}
 		System.out.println("O novo salário é: " + salario);
 	}
